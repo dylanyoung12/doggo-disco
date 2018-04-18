@@ -56,9 +56,9 @@ h2 {
   margin-bottom: 50px;
 }
 .narrow {
-  width: 170px;
+  width: 200px;
 }
 .wide {
-  width: 370px;
+  width: 400px;
 }
 </style>
