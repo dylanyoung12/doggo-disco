@@ -4,11 +4,13 @@ import App from './App'
 import router from './router'
 import store from './store'
 
-Vue.config.productionTip = false
-
-Vue.use(BootstrapVue);
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+Vue.use(BootstrapVue);
+Vue.config.productionTip = false
+
+
 
 /* eslint-disable no-new */
 new Vue({

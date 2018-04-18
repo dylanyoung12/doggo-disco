@@ -25,6 +25,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
 button {
   min-width: 100px;
   line-height: 1em;
@@ -51,5 +59,4 @@ input {
   margin-bottom: 5px;
   padding: 10px;
 }
-
 </style>

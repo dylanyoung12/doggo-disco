@@ -4,13 +4,7 @@ import Vuex from 'vuex';
 
 import axios from 'axios';
 
-import BootstrapVue from 'bootstrap-vue'
-
 Vue.use(Vuex);
-Vue.use(BootstrapVue);
-
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 const getAuthHeader = () => {
   return { headers: {'Authorization': localStorage.getItem('token')}};
