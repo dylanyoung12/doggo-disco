@@ -73,7 +73,10 @@ a.nav-link {
   color: #007bff;
   cursor: pointer;
 }
-
+.danceTime nav.navbar {
+  background-color: white;
+  border-radius: .25rem;
+}
 .errorPlace {
   height: 20px;
 }

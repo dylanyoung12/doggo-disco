@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="loggedIn">
-      <h3 v-if="favorites.length === 0">Your favorite doggos will appear here</h3>
+      <h3 v-if="isEmpty(favorites)">Your favorite doggos will appear here</h3>
       <ul class='list-group' v-for="item in favorites">
         <li class='list-group-item'>
           <h3>{{ item.name }}</h3>
@@ -50,6 +50,12 @@ export default {
     },
     remove: function(dog) {
       this.$store.dispatch('removeFavorite', dog);
+    },
+    isEmpty: function(obj) {
+      for (var key in obj) {
+        if (obj.hasOwnProperty(key)) return false;
+      }
+      return true;
     },
   },
 }

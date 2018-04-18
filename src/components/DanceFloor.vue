@@ -101,10 +101,6 @@ body.danceTime {
 .danceTime {
   color: black !important;
 }
-.danceTime nav.navbar {
-  background-color: lightgray;
-  border-radius: .25rem;
-}
 @keyframes colorchange {
   0%   {background-color: rgb(87, 245, 54);}
   25%  {background-color: rgb(43, 176, 255);}
