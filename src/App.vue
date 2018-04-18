@@ -2,6 +2,8 @@
   <div id="app">
     <app-header/>
     <router-view/>
+    <br><br><br><br><br><br>
+    <button class='btn btn-sm' onclick='https://github.com/dylanyoung12/doggo-disco'>github repository</button>
   </div>
 </template>
 
@@ -20,30 +22,10 @@ export default {
 /* https://color.adobe.com/CS04-color-theme-1994456/?showPublished=true */
 body {
   font-size: 18px;
-  padding: 20px 100px 5px 100px;
+  padding: 20px 100px 15px 100px;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-.navbar {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-}
-button {
-  min-width: 100px;
-  line-height: 1em;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1.2rem;
-  margin: 4px 2px;
 }
 button:focus {
   outline: none;
@@ -58,5 +40,8 @@ input {
   height: 50px;
   margin-bottom: 5px;
   padding: 10px;
+}
+a #github {
+  background-color: lightgray;
 }
 </style>
