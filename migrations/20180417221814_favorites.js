@@ -1,10 +1,11 @@
 
 exports.up = function(knex, Promise) {
   return Promise.all([
-    knex.schema.createTable('doggos', function(table) {
+    knex.schema.createTable('favorites', function(table) {
       table.increments('id').primary();
-      table.string('breed');
-      table.string('sub_breed');
+      table.string('name');
+      table.string('path');
+      table.dateTime('created');
       table.integer('user_id').unsigned().notNullable().references('id').inTable('users');
     }),
   ]);
@@ -12,6 +13,6 @@ exports.up = function(knex, Promise) {
 
 exports.down = function(knex, Promise) {
   return Promise.all([
-      knex.schema.dropTable('doggos'),
-    ]);
+    knex.schema.dropTable('favorites'),
+  ]);
 };

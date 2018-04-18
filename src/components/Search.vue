@@ -1,9 +1,9 @@
 <template>
-  <div class="container" id="search">
+  <div id="search">
     <form v-on:submit.prevent="getDoggo">
       <div class="form-group">
         <label>Select a breed of dog: </label>
-        <select v-model="selected">
+        <select class='form-control w-75' v-model="selected">
           <option v-for="breed in breeds" v-bind:value="breed">
             {{ toUpper(breed) }}
           </option>
@@ -11,13 +11,13 @@
       </div>
       <div class="form-group" v-if="subBreeds.length > 0">
         <label>Select Sub-breed: </label>
-        <select v-model="subSelected">
+        <select class='form-control w-50' v-model="subSelected">
           <option v-for="subBreed in subBreeds" v-bind:value="subBreed">
             {{ toUpper(subBreed) }}
           </option>
         </select>
       </div>
-      <button type="submit">Submit</button>
+      <button class='btn btn-lg' type="submit">Submit</button>
     </form>
     <br><br>
     <div class="container">

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="loggedIn">
-      <doggo-select/>
+      <search/>
     </div>
     <div v-else>
       <welcome-page/>
@@ -14,17 +14,17 @@
 
 <script>
 import WelcomePage from './WelcomePage';
-import DoggoSelect from './DoggoSelect';
+import Search from './Search';
 import DanceFloor from './DanceFloor';
 export default {
   name: 'HomePage',
-  components: {WelcomePage, DoggoSelect, DanceFloor },
+  components: {WelcomePage, Search, DanceFloor },
   computed: {
     loggedIn: function() {
       return this.$store.getters.loggedIn;
     },
     danceTime: function() {
-      return this.$store.getters.danceTime;
+      return this.$store.getters.current !== '';
     }
   },
 }

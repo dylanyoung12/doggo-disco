@@ -1,19 +1,22 @@
 <template>
-  <nav>
-    <ul id="menu">
-      <li><router-link to="/">Home</router-link></li>
-      <li class="right" v-if="loggedIn"><a @click="logout" href="#">Logout</a></li>
-      <li class="right" v-if="loggedIn">{{user.username}}</li>
-      <form v-else class="right" v-on:submit.prevent="login">
-        <input v-model="username" placeholder="Username">
-        <input type="password" v-model="password" placeholder="Password">
-        <button class="primary" type="submit">Login</button>
-      </form>
-    </ul>
+  <div>
+    <nav class='navbar navbar-expand-lg navbar-light' id="menu">
+      <a class='nav-item nav-link' @click="toHome">Home</a>
+      <a class='nav-item nav-link mr-auto' v-if='loggedIn' @click="toFavorites">Favorites</a>
+      <span class="nav-item navbar-text" v-if="loggedIn">{{user.username}}&emsp;</span>
+      <a class='nav-item nav-link' v-if="loggedIn" @click="logout" href="#">Logout</a>
+      <div class='nav-item ml-auto' v-else>
+        <form class='navbar-form' v-on:submit.prevent="login">
+          <input v-model="username" placeholder="Username">
+          <input type="password" v-model="password" placeholder="Password">
+          <button class="primary" type="submit">Login</button>
+        </form>
+      </div>
+    </nav>
     <div class="flexWrapper errorPlace">
       <p v-if="loginError" class="flexRight error">{{loginError}}</p>
     </div>
-  </nav>
+  </div>
 </template>
 
 <script>
@@ -47,46 +50,34 @@ export default {
       });
     },
     logout: function() {
+      document.body.className = '';
       this.$store.dispatch('logout');
-    }
+      this.$router.push({ path: '/' });
+    },
+    toFavorites: function() {
+      this.$router.push({ path: '/favorites' });
+    },
+    toHome: function() {
+      this.$router.push({ path: '/' });
+    },
   }
 }
 </script>
 
 <style scoped>
- /* Strip the ul of padding and list styling */
- nav {
-     display: grid;
-     margin-bottom: 20px;
- }
- ul {
-     list-style-type:none;
-     margin:0;
-     padding:0;
- }
- /* Create a horizontal list with spacing */
- li {
-     display:inline-block;
-     float: left;
-     margin-right: 20px;
-     height: 50px;
-     text-align: center;
-     line-height: 50px;
-     color: #666;
- }
- /*Active color*/
- li a.active {
- }
- /*Hover state for top level links*/
- li:hover a {
- }
- .right {
-     float: right;
- }
- .errorPlace {
-     height: 20px;
- }
- img {
-     width: 50px;
- }
+.nav {
+  width: 100%;
+}
+
+a.nav-link {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.errorPlace {
+  height: 20px;
+}
+img {
+  width: 50px;
+}
 </style>

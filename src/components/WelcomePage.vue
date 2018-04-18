@@ -1,14 +1,18 @@
 <template>
-  <div class="column">
+  <div class="">
     <h1>Are You Ready to Disco?</h1>
     <h2>Get signed up to join the party!</h2>
     <form v-on:submit.prevent="register">
-      <p>1. Choose a user name (this is how you will log in).</p>
-      <input class="narrow" v-model="username" placeholder="User Name">
-      <p>2. Create an account.</p>
-      <input class="wide" v-model="name" placeholder="First and Last Name"><br/>
-      <input class="narrow" type="password" v-model="password" placeholder="Password">
-      <button class="alternate" type="submit">Register</button>
+      <div class='form-group'>
+        <p>1. Choose a user name (this is how you will log in).</p>
+        <input class="narrow" v-model="username" placeholder="User Name">
+      </div>
+      <div class='form-group'>
+        <p>2. Create an account.</p>
+        <input class="wide" v-model="name" placeholder="First and Last Name"><br/>
+        <input class="narrow" type="password" v-model="password" placeholder="Password">
+        <button class="alternate" type="submit">Register</button>
+      </div>
     </form>
     <p class="error">{{registerError}}</p>
   </div>
@@ -42,9 +46,6 @@ export default {
 </script>
 
 <style scoped>
-img {
-  width: 100px;
-}
 h1 {
   margin-bottom: 0px;
 }

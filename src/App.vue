@@ -37,12 +37,6 @@ button {
   font-size: 1.2rem;
   margin: 4px 2px;
 }
-button.primary {
-  background-color: #F35537;
-}
-button.alternate {
-  background-color: #77C4D3;
-}
 button:focus {
   outline: none;
 }
@@ -53,19 +47,9 @@ button:active {
   transform: translateY(4px);
 }
 input {
-  height: 20px;
+  height: 50px;
+  margin-bottom: 5px;
   padding: 10px;
 }
-.flexWrapper {
-  display:flex;
-}
-.flexRight {
-  margin-left: auto;
-}
-.error {
-  color: #F35537;
-}
-.column {
-  width: 800px;
-}
+
 </style>
