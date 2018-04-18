@@ -3,13 +3,13 @@
     <nav class='navbar navbar-expand-lg navbar-light' id="menu">
       <a class='nav-item nav-link' @click="toHome">Home</a>
       <a class='nav-item nav-link mr-auto' v-if='loggedIn' @click="toFavorites">Favorites</a>
-      <span class="nav-item navbar-text" v-if="loggedIn">{{user.username}}&emsp;</span>
+      <span class="nav-item navbar-text font-weight-bold" v-if="loggedIn">{{user.name}}&emsp;</span>
       <a class='nav-item nav-link' v-if="loggedIn" @click="logout" href="#">Logout</a>
       <div class='nav-item ml-auto' v-else>
         <form class='navbar-form' v-on:submit.prevent="login">
-          <input v-model="username" placeholder="Username">
-          <input type="password" v-model="password" placeholder="Password">
-          <button class="primary" type="submit">Login</button>
+          <input class='form-control' v-model="username" placeholder="Username">
+          <input class='form-control' type="password" v-model="password" placeholder="Password">
+          <button class="btn btn-lg" type="submit">Login</button>
         </form>
       </div>
     </nav>
@@ -82,5 +82,9 @@ a.nav-link {
 }
 img {
   width: 50px;
+}
+.form-control {
+display: inline-block;
+width: 200px;
 }
 </style>

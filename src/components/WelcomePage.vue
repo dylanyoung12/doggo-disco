@@ -5,13 +5,13 @@
     <form v-on:submit.prevent="register">
       <div class='form-group'>
         <p>1. Choose a user name (this is how you will log in).</p>
-        <input class="narrow" v-model="username" placeholder="User Name">
+        <input class="narrow form-control" v-model="username" placeholder="User Name">
       </div>
       <div class='form-group'>
         <p>2. Create an account.</p>
-        <input class="wide" v-model="name" placeholder="First and Last Name"><br/>
-        <input class="narrow" type="password" v-model="password" placeholder="Password">
-        <button class="alternate" type="submit">Register</button>
+        <input class="wide form-control" v-model="name" placeholder="First and Last Name"><br/>
+        <input class="narrow form-control" type="password" v-model="password" placeholder="Password">
+        <button class="btn btn-lg" type="submit">Register</button>
       </div>
     </form>
     <p class="error">{{registerError}}</p>

@@ -27,26 +27,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.navbar {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
-}
-button {
-  min-width: 100px;
-  line-height: 1em;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1.2rem;
-  margin: 4px 2px;
-}
 button:focus {
   outline: none;
 }
@@ -56,9 +36,11 @@ button:hover {
 button:active {
   transform: translateY(4px);
 }
-input {
+input.form-control {
   height: 50px;
   margin-bottom: 5px;
   padding: 10px;
+  width: 200px;
+  display: inline-block;
 }
 </style>

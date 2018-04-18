@@ -7,8 +7,8 @@
       <div class='form-group'>
         <label>Like this doggo? Give it a name and save it for later!</label>
         <input v-model='dogName' type='text' class='form-control' placeholder="Name"/>
+        &ensp;<button type='submit' class='btn btn-lg'>Save</button>
       </div>
-      <button type='submit' class='btn'>Save</button>
       <small class='sm' v-if='nameError'>&emsp;Please select a name for your doggo</small>
     </form>
     <br>
