@@ -3,7 +3,7 @@
     <app-header/>
     <router-view/>
     <br><br><br><br><br><br>
-    <button class='btn btn-sm' onclick='https://github.com/dylanyoung12/doggo-disco'>github repository</button>
+    <a href='https://github.com/dylanyoung12/doggo-disco'>github repository</a>
   </div>
 </template>
 
@@ -40,8 +40,5 @@ input {
   height: 50px;
   margin-bottom: 5px;
   padding: 10px;
-}
-a #github {
-  background-color: lightgray;
 }
 </style>
